@@ -14556,3 +14556,684 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1738058738.9456
     'REQUEST_TIME' => 1738058738
 ]
+2025-01-28 11:08:59 [::1][1][ce2ghtoplqgs08v3ijcspsc5lu][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: pathUploadPickleballCourtFolder in C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php:320
+Stack trace:
+#0 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php(320): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 320, Array)
+#1 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php(331): common\components\FileUpload->getUploadedLocation(31)
+#2 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\models\PickleballCourt.php(86): common\components\FileUpload->getFileUrl(31, NULL)
+#3 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Component.php(139): common\models\PickleballCourt->getImageUrl()
+#4 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\db\BaseActiveRecord.php(296): yii\base\Component->__get('imageUrl')
+#5 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\views\pickleball-court\index.php(33): yii\db\BaseActiveRecord->__get('imageUrl')
+#6 [internal function]: yii\base\View->{closure}(Object(common\models\PickleballCourt), 1, 0, Object(yii\grid\DataColumn))
+#7 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\DataColumn.php(252): call_user_func(Object(Closure), Object(common\models\PickleballCourt), 1, 0, Object(yii\grid\DataColumn))
+#8 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\DataColumn.php(266): yii\grid\DataColumn->getDataCellValue(Object(common\models\PickleballCourt), 1, 0)
+#9 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(common\models\PickleballCourt), 1, 0)
+#10 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Object(common\models\PickleballCourt), 1, 0)
+#11 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Object(common\models\PickleballCourt), 1, 0)
+#12 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#13 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#14 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#15 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#16 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#17 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#18 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#19 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Widget.php(146): yii\grid\GridView->run()
+#20 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\views\pickleball-court\index.php(23): yii\base\Widget::widget(Array)
+#21 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#22 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#23 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(backend\controllers\PickleballCourtController))
+#24 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('index', Array, Object(backend\controllers\PickleballCourtController))
+#25 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\controllers\PickleballCourtController.php(45): yii\base\Controller->render('index', Array)
+#26 [internal function]: backend\controllers\PickleballCourtController->actionIndex()
+#27 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#28 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#29 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('', Array)
+#30 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pickleball-cour...', Array)
+#31 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#32 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\web\index.php(17): yii\base\Application->run()
+#33 {main}
+2025-01-28 11:08:59 [::1][1][ce2ghtoplqgs08v3ijcspsc5lu][info][application] $_GET = [
+    'r' => 'pickleball-court'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'username' => 'admin'
+    'password' => '123456'
+    'advanced-frontend' => 'ivqlle1j2u3uetsptu538v5p5n'
+    '_csrf-frontend' => 'bb874d2373ad13d8a38abdb922cbb902098c61f75db46804878142f2f990b59fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"uVzKvK-yZXtTV491WBR12ppzORHw6fhk\";}'
+    'advanced-backend' => 'ce2ghtoplqgs08v3ijcspsc5lu'
+    '_identity-backend' => '2ac8499f0cf710cd70832c612fc8fe7fea2c6515a4661e183d0ad5c1725edea9a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE\",2592000]\";}'
+    '_csrf-backend' => 'f8cdaca3991385e95ecbdabaae4616906bb064c4bda0513a0b6fc7a7598073b6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"dkfaqYTm7FDN30adCUHAG6Evk7YhYftH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/applications/sayhi_v1.5_code/backend/web/'
+    '__id' => 1
+    '__authKey' => 'Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE'
+]
+
+$_SERVER = [
+    'MIBDIRS' => '/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/applications/sayhi_v1.5_code/backend/web/index.php?r=post%2Freported-post'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'username=admin; password=123456; advanced-frontend=ivqlle1j2u3uetsptu538v5p5n; _csrf-frontend=bb874d2373ad13d8a38abdb922cbb902098c61f75db46804878142f2f990b59fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22uVzKvK-yZXtTV491WBR12ppzORHw6fhk%22%3B%7D; advanced-backend=ce2ghtoplqgs08v3ijcspsc5lu; _identity-backend=2ac8499f0cf710cd70832c612fc8fe7fea2c6515a4661e183d0ad5c1725edea9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE%22%2C2592000%5D%22%3B%7D; _csrf-backend=f8cdaca3991385e95ecbdabaae4616906bb064c4bda0513a0b6fc7a7598073b6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22dkfaqYTm7FDN30adCUHAG6Evk7YhYftH%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\composer;C:\\Users\\CHROME\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\CHROME\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\CHROME\\AppData\\Roaming\\npm;C:\\xampp\\php;C:\\php-8.1.31;C:\\Users\\CHROME\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\xampp7\\php;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/applications/sayhi_v1.5_code/backend/web/index.php'
+    'REMOTE_PORT' => '56941'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pickleball-court'
+    'REQUEST_URI' => '/applications/sayhi_v1.5_code/backend/web/index.php?r=pickleball-court'
+    'SCRIPT_NAME' => '/applications/sayhi_v1.5_code/backend/web/index.php'
+    'PHP_SELF' => '/applications/sayhi_v1.5_code/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1738058939.053
+    'REQUEST_TIME' => 1738058939
+]
+2025-01-28 11:11:20 [::1][1][ce2ghtoplqgs08v3ijcspsc5lu][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: pathUploadPickleballCourtFolder in C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php:320
+Stack trace:
+#0 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php(320): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 320, Array)
+#1 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php(331): common\components\FileUpload->getUploadedLocation(31)
+#2 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\models\PickleballCourt.php(86): common\components\FileUpload->getFileUrl(31, NULL)
+#3 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Component.php(139): common\models\PickleballCourt->getImageUrl()
+#4 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\db\BaseActiveRecord.php(296): yii\base\Component->__get('imageUrl')
+#5 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\views\pickleball-court\index.php(33): yii\db\BaseActiveRecord->__get('imageUrl')
+#6 [internal function]: yii\base\View->{closure}(Object(common\models\PickleballCourt), 1, 0, Object(yii\grid\DataColumn))
+#7 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\DataColumn.php(252): call_user_func(Object(Closure), Object(common\models\PickleballCourt), 1, 0, Object(yii\grid\DataColumn))
+#8 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\DataColumn.php(266): yii\grid\DataColumn->getDataCellValue(Object(common\models\PickleballCourt), 1, 0)
+#9 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(common\models\PickleballCourt), 1, 0)
+#10 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Object(common\models\PickleballCourt), 1, 0)
+#11 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Object(common\models\PickleballCourt), 1, 0)
+#12 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#13 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#14 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#15 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#16 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#17 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#18 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#19 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Widget.php(146): yii\grid\GridView->run()
+#20 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\views\pickleball-court\index.php(23): yii\base\Widget::widget(Array)
+#21 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#22 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#23 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(backend\controllers\PickleballCourtController))
+#24 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('index', Array, Object(backend\controllers\PickleballCourtController))
+#25 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\controllers\PickleballCourtController.php(45): yii\base\Controller->render('index', Array)
+#26 [internal function]: backend\controllers\PickleballCourtController->actionIndex()
+#27 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#28 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#29 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('', Array)
+#30 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pickleball-cour...', Array)
+#31 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#32 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\web\index.php(17): yii\base\Application->run()
+#33 {main}
+2025-01-28 11:11:20 [::1][1][ce2ghtoplqgs08v3ijcspsc5lu][info][application] $_GET = [
+    'r' => 'pickleball-court'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'username' => 'admin'
+    'password' => '123456'
+    'advanced-frontend' => 'ivqlle1j2u3uetsptu538v5p5n'
+    '_csrf-frontend' => 'bb874d2373ad13d8a38abdb922cbb902098c61f75db46804878142f2f990b59fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"uVzKvK-yZXtTV491WBR12ppzORHw6fhk\";}'
+    'advanced-backend' => 'ce2ghtoplqgs08v3ijcspsc5lu'
+    '_identity-backend' => '2ac8499f0cf710cd70832c612fc8fe7fea2c6515a4661e183d0ad5c1725edea9a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE\",2592000]\";}'
+    '_csrf-backend' => 'f8cdaca3991385e95ecbdabaae4616906bb064c4bda0513a0b6fc7a7598073b6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"dkfaqYTm7FDN30adCUHAG6Evk7YhYftH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/applications/sayhi_v1.5_code/backend/web/'
+    '__id' => 1
+    '__authKey' => 'Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE'
+]
+
+$_SERVER = [
+    'MIBDIRS' => '/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/applications/sayhi_v1.5_code/backend/web/index.php?r=post%2Fview&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'username=admin; password=123456; advanced-frontend=ivqlle1j2u3uetsptu538v5p5n; _csrf-frontend=bb874d2373ad13d8a38abdb922cbb902098c61f75db46804878142f2f990b59fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22uVzKvK-yZXtTV491WBR12ppzORHw6fhk%22%3B%7D; advanced-backend=ce2ghtoplqgs08v3ijcspsc5lu; _identity-backend=2ac8499f0cf710cd70832c612fc8fe7fea2c6515a4661e183d0ad5c1725edea9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE%22%2C2592000%5D%22%3B%7D; _csrf-backend=f8cdaca3991385e95ecbdabaae4616906bb064c4bda0513a0b6fc7a7598073b6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22dkfaqYTm7FDN30adCUHAG6Evk7YhYftH%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\composer;C:\\Users\\CHROME\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\CHROME\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\CHROME\\AppData\\Roaming\\npm;C:\\xampp\\php;C:\\php-8.1.31;C:\\Users\\CHROME\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\xampp7\\php;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/applications/sayhi_v1.5_code/backend/web/index.php'
+    'REMOTE_PORT' => '56965'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pickleball-court'
+    'REQUEST_URI' => '/applications/sayhi_v1.5_code/backend/web/index.php?r=pickleball-court'
+    'SCRIPT_NAME' => '/applications/sayhi_v1.5_code/backend/web/index.php'
+    'PHP_SELF' => '/applications/sayhi_v1.5_code/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1738059080.6573
+    'REQUEST_TIME' => 1738059080
+]
+2025-01-28 11:13:15 [::1][1][ce2ghtoplqgs08v3ijcspsc5lu][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: pathUploadCompetitionFolder in C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php:246
+Stack trace:
+#0 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php(246): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 246, Array)
+#1 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php(172): common\components\FileUpload->getUploadedLocation(8)
+#2 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\controllers\CompetitionController.php(128): common\components\FileUpload->uploadFile(Object(yii\web\UploadedFile), 8, false)
+#3 [internal function]: backend\controllers\CompetitionController->actionCreate()
+#4 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#7 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('competition/cre...', Array)
+#8 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2025-01-28 11:13:15 [::1][1][ce2ghtoplqgs08v3ijcspsc5lu][info][application] $_GET = [
+    'r' => 'competition/create'
+]
+
+$_POST = [
+    '_csrf-backend' => 'ViEAxbAGNaTwBU8sMc87m9-QHT0h8TRZwPvntt7NFHMySmakwV9hycdDC2IC_1r_nMVVfGbHcS-rzL7eh6tgOw=='
+    'Competition' => [
+        'title' => 'sfdsdfwef'
+        'start_date' => '2025-01-07'
+        'end_date' => '2025-01-18'
+        'joining_fee' => '400'
+        'status' => '1'
+        'competition_media_type' => '1'
+        'imageFile' => ''
+        'exampleFile' => [
+            0 => ''
+        ]
+        'description' => 'wqedwqreqwa'
+        'award_type' => '1'
+    ]
+    'competitionPosition' => [
+        0 => 'qwerty'
+        1 => ''
+    ]
+    'competitionAward' => [
+        0 => '23000'
+        1 => ''
+    ]
+]
+
+$_FILES = [
+    'Competition' => [
+        'name' => [
+            'imageFile' => 'Screenshot (1).png'
+            'exampleFile' => [
+                0 => 'Screenshot (2).png'
+            ]
+        ]
+        'type' => [
+            'imageFile' => 'image/png'
+            'exampleFile' => [
+                0 => 'image/png'
+            ]
+        ]
+        'tmp_name' => [
+            'imageFile' => 'C:\\xampp\\tmp\\phpADBE.tmp'
+            'exampleFile' => [
+                0 => 'C:\\xampp\\tmp\\phpADBF.tmp'
+            ]
+        ]
+        'error' => [
+            'imageFile' => 0
+            'exampleFile' => [
+                0 => 0
+            ]
+        ]
+        'size' => [
+            'imageFile' => 816894
+            'exampleFile' => [
+                0 => 223793
+            ]
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'username' => 'admin'
+    'password' => '123456'
+    'advanced-frontend' => 'ivqlle1j2u3uetsptu538v5p5n'
+    '_csrf-frontend' => 'bb874d2373ad13d8a38abdb922cbb902098c61f75db46804878142f2f990b59fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"uVzKvK-yZXtTV491WBR12ppzORHw6fhk\";}'
+    'advanced-backend' => 'ce2ghtoplqgs08v3ijcspsc5lu'
+    '_identity-backend' => '2ac8499f0cf710cd70832c612fc8fe7fea2c6515a4661e183d0ad5c1725edea9a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE\",2592000]\";}'
+    '_csrf-backend' => 'f8cdaca3991385e95ecbdabaae4616906bb064c4bda0513a0b6fc7a7598073b6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"dkfaqYTm7FDN30adCUHAG6Evk7YhYftH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/applications/sayhi_v1.5_code/backend/web/'
+    '__id' => 1
+    '__authKey' => 'Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE'
+]
+
+$_SERVER = [
+    'MIBDIRS' => '/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1042841'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarytfr910BYgP5wcWtS'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/applications/sayhi_v1.5_code/backend/web/index.php?r=competition%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'username=admin; password=123456; advanced-frontend=ivqlle1j2u3uetsptu538v5p5n; _csrf-frontend=bb874d2373ad13d8a38abdb922cbb902098c61f75db46804878142f2f990b59fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22uVzKvK-yZXtTV491WBR12ppzORHw6fhk%22%3B%7D; advanced-backend=ce2ghtoplqgs08v3ijcspsc5lu; _identity-backend=2ac8499f0cf710cd70832c612fc8fe7fea2c6515a4661e183d0ad5c1725edea9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE%22%2C2592000%5D%22%3B%7D; _csrf-backend=f8cdaca3991385e95ecbdabaae4616906bb064c4bda0513a0b6fc7a7598073b6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22dkfaqYTm7FDN30adCUHAG6Evk7YhYftH%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\composer;C:\\Users\\CHROME\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\CHROME\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\CHROME\\AppData\\Roaming\\npm;C:\\xampp\\php;C:\\php-8.1.31;C:\\Users\\CHROME\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\xampp7\\php;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/applications/sayhi_v1.5_code/backend/web/index.php'
+    'REMOTE_PORT' => '56984'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=competition%2Fcreate'
+    'REQUEST_URI' => '/applications/sayhi_v1.5_code/backend/web/index.php?r=competition%2Fcreate'
+    'SCRIPT_NAME' => '/applications/sayhi_v1.5_code/backend/web/index.php'
+    'PHP_SELF' => '/applications/sayhi_v1.5_code/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1738059195.0694
+    'REQUEST_TIME' => 1738059195
+]
+2025-01-28 11:14:13 [::1][1][ce2ghtoplqgs08v3ijcspsc5lu][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: pathUploadCompetitionFolder in C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php:246
+Stack trace:
+#0 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php(246): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 246, Array)
+#1 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php(172): common\components\FileUpload->getUploadedLocation(8)
+#2 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\controllers\CompetitionController.php(128): common\components\FileUpload->uploadFile(Object(yii\web\UploadedFile), 8, false)
+#3 [internal function]: backend\controllers\CompetitionController->actionCreate()
+#4 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#7 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('competition/cre...', Array)
+#8 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2025-01-28 11:14:13 [::1][1][ce2ghtoplqgs08v3ijcspsc5lu][info][application] $_GET = [
+    'r' => 'competition/create'
+]
+
+$_POST = [
+    '_csrf-backend' => 'ViEAxbAGNaTwBU8sMc87m9-QHT0h8TRZwPvntt7NFHMySmakwV9hycdDC2IC_1r_nMVVfGbHcS-rzL7eh6tgOw=='
+    'Competition' => [
+        'title' => 'sfdsdfwef'
+        'start_date' => '2025-01-07'
+        'end_date' => '2025-01-18'
+        'joining_fee' => '400'
+        'status' => '1'
+        'competition_media_type' => '1'
+        'imageFile' => ''
+        'exampleFile' => [
+            0 => ''
+        ]
+        'description' => 'wqedwqreqwa'
+        'award_type' => '1'
+    ]
+    'competitionPosition' => [
+        0 => 'qwerty'
+        1 => ''
+    ]
+    'competitionAward' => [
+        0 => '23000'
+        1 => ''
+    ]
+]
+
+$_FILES = [
+    'Competition' => [
+        'name' => [
+            'imageFile' => 'Screenshot (1).png'
+            'exampleFile' => [
+                0 => 'Screenshot (2).png'
+            ]
+        ]
+        'type' => [
+            'imageFile' => 'image/png'
+            'exampleFile' => [
+                0 => 'image/png'
+            ]
+        ]
+        'tmp_name' => [
+            'imageFile' => 'C:\\xampp\\tmp\\php9205.tmp'
+            'exampleFile' => [
+                0 => 'C:\\xampp\\tmp\\php9206.tmp'
+            ]
+        ]
+        'error' => [
+            'imageFile' => 0
+            'exampleFile' => [
+                0 => 0
+            ]
+        ]
+        'size' => [
+            'imageFile' => 816894
+            'exampleFile' => [
+                0 => 223793
+            ]
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'username' => 'admin'
+    'password' => '123456'
+    'advanced-frontend' => 'ivqlle1j2u3uetsptu538v5p5n'
+    '_csrf-frontend' => 'bb874d2373ad13d8a38abdb922cbb902098c61f75db46804878142f2f990b59fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"uVzKvK-yZXtTV491WBR12ppzORHw6fhk\";}'
+    'advanced-backend' => 'ce2ghtoplqgs08v3ijcspsc5lu'
+    '_identity-backend' => '2ac8499f0cf710cd70832c612fc8fe7fea2c6515a4661e183d0ad5c1725edea9a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE\",2592000]\";}'
+    '_csrf-backend' => 'f8cdaca3991385e95ecbdabaae4616906bb064c4bda0513a0b6fc7a7598073b6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"dkfaqYTm7FDN30adCUHAG6Evk7YhYftH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/applications/sayhi_v1.5_code/backend/web/'
+    '__id' => 1
+    '__authKey' => 'Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE'
+]
+
+$_SERVER = [
+    'MIBDIRS' => '/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1042841'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarytfr910BYgP5wcWtS'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/applications/sayhi_v1.5_code/backend/web/index.php?r=competition%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'username=admin; password=123456; advanced-frontend=ivqlle1j2u3uetsptu538v5p5n; _csrf-frontend=bb874d2373ad13d8a38abdb922cbb902098c61f75db46804878142f2f990b59fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22uVzKvK-yZXtTV491WBR12ppzORHw6fhk%22%3B%7D; advanced-backend=ce2ghtoplqgs08v3ijcspsc5lu; _identity-backend=2ac8499f0cf710cd70832c612fc8fe7fea2c6515a4661e183d0ad5c1725edea9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE%22%2C2592000%5D%22%3B%7D; _csrf-backend=f8cdaca3991385e95ecbdabaae4616906bb064c4bda0513a0b6fc7a7598073b6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22dkfaqYTm7FDN30adCUHAG6Evk7YhYftH%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\composer;C:\\Users\\CHROME\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\CHROME\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\CHROME\\AppData\\Roaming\\npm;C:\\xampp\\php;C:\\php-8.1.31;C:\\Users\\CHROME\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\xampp7\\php;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/applications/sayhi_v1.5_code/backend/web/index.php'
+    'REMOTE_PORT' => '56985'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=competition%2Fcreate'
+    'REQUEST_URI' => '/applications/sayhi_v1.5_code/backend/web/index.php?r=competition%2Fcreate'
+    'SCRIPT_NAME' => '/applications/sayhi_v1.5_code/backend/web/index.php'
+    'PHP_SELF' => '/applications/sayhi_v1.5_code/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1738059253.4945
+    'REQUEST_TIME' => 1738059253
+]
+2025-01-28 11:19:03 [::1][1][ce2ghtoplqgs08v3ijcspsc5lu][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: pathUploadCompetitionFolder in C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php:246
+Stack trace:
+#0 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php(246): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 246, Array)
+#1 C:\xampp\htdocs\applications\sayhi_v1.5_code\common\components\FileUpload.php(172): common\components\FileUpload->getUploadedLocation(8)
+#2 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\controllers\CompetitionController.php(128): common\components\FileUpload->uploadFile(Object(yii\web\UploadedFile), 8, false)
+#3 [internal function]: backend\controllers\CompetitionController->actionCreate()
+#4 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#7 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('competition/cre...', Array)
+#8 C:\xampp\htdocs\applications\sayhi_v1.5_code\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\applications\sayhi_v1.5_code\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2025-01-28 11:19:03 [::1][1][ce2ghtoplqgs08v3ijcspsc5lu][info][application] $_GET = [
+    'r' => 'competition/create'
+]
+
+$_POST = [
+    '_csrf-backend' => 'BZbc02o987jW4_vbDSaTmnD-NV6dtas4HP0uTZKBajxh_bqyG2Sn1eGlv5U-FvL-M6t9H9qD7k53yncly-cedA=='
+    'Competition' => [
+        'title' => 'loyt fodger'
+        'start_date' => '2025-01-18'
+        'end_date' => '2025-01-19'
+        'joining_fee' => '500'
+        'status' => '1'
+        'competition_media_type' => '1'
+        'imageFile' => ''
+        'exampleFile' => [
+            0 => ''
+        ]
+        'description' => 'qweryt hgfd point '
+        'award_type' => '1'
+    ]
+    'competitionPosition' => [
+        0 => 'polkiuyt '
+        1 => ''
+        2 => ''
+    ]
+    'competitionAward' => [
+        0 => '67000'
+        1 => ''
+        2 => ''
+    ]
+]
+
+$_FILES = [
+    'Competition' => [
+        'name' => [
+            'imageFile' => 'Screenshot (1).png'
+            'exampleFile' => [
+                0 => 'Screenshot (1).png'
+            ]
+        ]
+        'type' => [
+            'imageFile' => 'image/png'
+            'exampleFile' => [
+                0 => 'image/png'
+            ]
+        ]
+        'tmp_name' => [
+            'imageFile' => 'C:\\xampp\\tmp\\phpFD8F.tmp'
+            'exampleFile' => [
+                0 => 'C:\\xampp\\tmp\\phpFDA0.tmp'
+            ]
+        ]
+        'error' => [
+            'imageFile' => 0
+            'exampleFile' => [
+                0 => 0
+            ]
+        ]
+        'size' => [
+            'imageFile' => 816894
+            'exampleFile' => [
+                0 => 816894
+            ]
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'username' => 'admin'
+    'password' => '123456'
+    'advanced-frontend' => 'ivqlle1j2u3uetsptu538v5p5n'
+    '_csrf-frontend' => 'bb874d2373ad13d8a38abdb922cbb902098c61f75db46804878142f2f990b59fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"uVzKvK-yZXtTV491WBR12ppzORHw6fhk\";}'
+    'advanced-backend' => 'ce2ghtoplqgs08v3ijcspsc5lu'
+    '_identity-backend' => '2ac8499f0cf710cd70832c612fc8fe7fea2c6515a4661e183d0ad5c1725edea9a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE\",2592000]\";}'
+    '_csrf-backend' => 'f8cdaca3991385e95ecbdabaae4616906bb064c4bda0513a0b6fc7a7598073b6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"dkfaqYTm7FDN30adCUHAG6Evk7YhYftH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/applications/sayhi_v1.5_code/backend/web/'
+    '__id' => 1
+    '__authKey' => 'Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE'
+]
+
+$_SERVER = [
+    'MIBDIRS' => '/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1636167'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarytBnfvehretkvq9KY'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/applications/sayhi_v1.5_code/backend/web/index.php?r=competition%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'username=admin; password=123456; advanced-frontend=ivqlle1j2u3uetsptu538v5p5n; _csrf-frontend=bb874d2373ad13d8a38abdb922cbb902098c61f75db46804878142f2f990b59fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22uVzKvK-yZXtTV491WBR12ppzORHw6fhk%22%3B%7D; advanced-backend=ce2ghtoplqgs08v3ijcspsc5lu; _identity-backend=2ac8499f0cf710cd70832c612fc8fe7fea2c6515a4661e183d0ad5c1725edea9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qy74UyfkNjS1KyPTh1Il_e1pdeAQXqXE%22%2C2592000%5D%22%3B%7D; _csrf-backend=f8cdaca3991385e95ecbdabaae4616906bb064c4bda0513a0b6fc7a7598073b6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22dkfaqYTm7FDN30adCUHAG6Evk7YhYftH%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\composer;C:\\Users\\CHROME\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\CHROME\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\CHROME\\AppData\\Roaming\\npm;C:\\xampp\\php;C:\\php-8.1.31;C:\\Users\\CHROME\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\xampp7\\php;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.4.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.4.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/applications/sayhi_v1.5_code/backend/web/index.php'
+    'REMOTE_PORT' => '57064'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=competition%2Fcreate'
+    'REQUEST_URI' => '/applications/sayhi_v1.5_code/backend/web/index.php?r=competition%2Fcreate'
+    'SCRIPT_NAME' => '/applications/sayhi_v1.5_code/backend/web/index.php'
+    'PHP_SELF' => '/applications/sayhi_v1.5_code/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1738059543.1746
+    'REQUEST_TIME' => 1738059543
+]
